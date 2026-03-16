@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Book Management System</title>
+</head>
+<body>
+    <div class="header">
+
+        <!--menu icon-->
+ <div class="menu-wrapper"  title="Menu bar">
+    <div class="menu-icon" onclick="toggleMenu(this)">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="menu-items" id="menu">
+      <a href="#" style="--delay: 0.1s">🏠  hello</a>
+      <a href="#" style="--delay: 0.1s">🏠 Home</a>
+      <a href="#" style="--delay: 0.2s">📄 About</a>
+      <a href="#" style="--delay: 0.3s">📞 Contact</a>
+      <a href="#" style="--delay: 0.4s">⚙️ Settings</a>
+    </div>
+  </div>
+    
+
+
+        <!--Book section -->
+       <div class="book_section">
+            <a href="#" title="My library"><i class="fa-solid fa-book fa-beat"></i></a>
+       </div>
+
+         <!--login and signUp section-->
+       <div class="login_signup">
+         <input type="button" value="Login" class="login_1" name="login_1">
+         <b>|</b>
+         <input type="button" value="SignUp" class="signup_1" name="signup_1">
+       </div>
+
+
+        <!--downlod , cart, and call navigation bar-->
+        <a href="#" class="download_1"><i class="fa-solid fa-download" title="Download"></i></a>
+        <a href="#" class="call_1"><i class="fa-solid fa-phone" title="7499587873"></i></a>
+       <a href="#" class="cart_1"><i class="fa-solid fa-cart-shopping" title="cart"></i></a>
+    </div>
+
+
+    <!-- Book Showcase Section -->
+<section class="bookshelf">
+  <h2>📚 Explore Our Collection</h2>
+  <div class="book-grid">
+    <div class="book-card">
+      <div class="book-cover">
+        <img src="https://picsum.photos/200/300?random=1" alt="Book 1">
+      </div>
+      <h3>The Silent Library</h3>
+      <p>by John Carter</p>
+      <button>Read More</button>
+    </div>
+
+    <div class="book-card">
+      <div class="book-cover">
+        <img src="https://picsum.photos/200/300?random=2" alt="Book 2">
+      </div>
+      <h3>Whispers of Time</h3>
+      <p>by Emma Stone</p>
+      <button>Read More</button>
+    </div>
+
+    <div class="book-card">
+      <div class="book-cover">
+        <img src="https://picsum.photos/200/300?random=3" alt="Book 3">
+      </div>
+      <h3>The Lost Pages</h3>
+      <p>by Robert Miles</p>
+      <button>Read More</button>
+    </div>
+
+    <div class="book-card">
+      <div class="book-cover">
+        <img src="https://picsum.photos/200/300?random=4" alt="Book 4">
+      </div>
+      <h3>Shadows & Secrets</h3>
+      <p>by Olivia Green</p>
+      <button>Read More</button>
+    </div>
+  </div>
+</section>
+
+
+<!--pdf section-->
+
+
+<!-- PDF Viewer Section -->
+<section class="pdf-section">
+  <h2>📖 Read Sample Book</h2>
+  <canvas id="pdf-render"></canvas>
+
+  <!-- Controls -->
+  <div class="pdf-controls">
+    <button onclick="prevPage()">⬅ Prev</button>
+    <span id="page-info">Page <span id="page-num"></span> of <span id="page-count"></span></span>
+    <button onclick="nextPage()">Next ➡</button>
+  </div>
+</section>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+<script src="Home.js"></script>
+</body>
+</html>
